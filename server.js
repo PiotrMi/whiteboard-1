@@ -1,7 +1,7 @@
 var compression = require('compression')
 var express = require('express')
 
-var port = process.argv[2] || 3000
+var port = process.env.PORT
 var app = express()
 app.use(compression())
 app.use(express.static(__dirname + '/static'))
